@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //资源管理类，实现单例模式
-public class ResManager : BesetMgr<ResManager>
+public class ResManager : BaseMgr<ResManager>
 {
     private enum LoadState
     {

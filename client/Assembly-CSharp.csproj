@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B3E7C95F-2234-E06C-F69A-5538AD6715C4}</ProjectGuid>
+    <ProjectGuid>{A2859A56-AB4A-51F9-60BB-1B6FC96E8C70}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,10 +56,19 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Logic\GameCore\Entitys\Entity\eEntityType.cs" />
+    <Compile Include="Assets\Scripts\Logic\GameCore\Entitys\Entity\Entity.cs" />
     <Compile Include="Assets\Scripts\Logic\GameCore\Res\ResManager.cs" />
+    <Compile Include="Assets\Scripts\Logic\GameCore\Entitys\Entity\EntityNpc.cs" />
+    <Compile Include="Assets\Scripts\Logic\GameCore\Entitys\Entity\EntityMainPlayer.cs" />
     <Compile Include="Assets\Scripts\Logic\GameCore\World\WorldManager.cs" />
+    <Compile Include="Assets\Scripts\Logic\GameCore\Entitys\eEntityType.cs" />
+    <Compile Include="Assets\Scripts\Logic\GameCore\Entitys\EntityFactory.cs" />
     <Compile Include="Assets\Scripts\Logic\GameCore\BesetMgr.cs" />
+    <Compile Include="Assets\Scripts\Logic\GameCore\Entitys\EntityManager.cs" />
     <Compile Include="Assets\Scripts\Logic\GameCore\GameStart.cs" />
+    <Compile Include="Assets\Scripts\Logic\GameCore\Modoles\UIView\login\UILogin.cs" />
+    <Compile Include="Assets\Scripts\Logic\UI\UIName.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Stylized NPC - Peasant Nolant\README.txt" />

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GameStart : MonoBehaviour
+public class GameStart : MonoBehaviour 
 {
     //在游戏运行期间始终保留的GameObject
     private GameObject mGo;
@@ -22,13 +22,14 @@ public class GameStart : MonoBehaviour
         {
             //场景世界初始化
             WorldManager.Instance.Init();
+            EntityManager.Instance.Init();
         }
         catch (Exception e)
         {
             Debug.LogException(e);
         }
 
-        WorldManager.Instance.LoadScene("rpgpp_lt_scene_1.0");
+        //WorldManager.Instance.LoadScene("rpgpp_lt_scene_1.0");
     }
 
 
@@ -40,6 +41,33 @@ public class GameStart : MonoBehaviour
         {
             ResManager.Instance.Update();
             WorldManager.Instance.Update();
+            EntityManager.Instance.Update();
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+    }
+
+    //在Update后更新
+    private void LateUpdate()
+    {
+        try
+        {
+            EntityManager.Instance.LateUpdate();
+        }
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+    }
+
+    //以固定频率更新
+    private void FixedUpdate()
+    {
+        try
+        {
+
         }
         catch (Exception e)
         {
@@ -55,7 +83,7 @@ public class GameStart : MonoBehaviour
 
         try
         {
-
+            EntityManager.Instance.Exit();
         }
         catch(Exception e)
         {

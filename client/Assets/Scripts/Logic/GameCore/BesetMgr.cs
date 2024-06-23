@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 //实现单例模版类
-public class BesetMgr<T> where T : class, new()
+public class BaseMgr<T> where T : class, new()
 {
     private static T mInstance = null;
     public static T Instance
