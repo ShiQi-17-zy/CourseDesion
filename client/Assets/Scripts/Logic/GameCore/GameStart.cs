@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameStart : MonoBehaviour
@@ -11,6 +12,7 @@ public class GameStart : MonoBehaviour
     //游戏启动运行的位置
     void Start()
     {
+        Debug.Log("Game Start");
         mGo = gameObject;
 
         //加载其他场景时不销毁该物体
@@ -18,24 +20,28 @@ public class GameStart : MonoBehaviour
 
         try
         {
-
+            //场景世界初始化
+            WorldManager.Instance.Init();
         }
         catch (Exception e)
         {
             Debug.LogException(e);
         }
 
-        ResManager.Instance
+        WorldManager.Instance.LoadScene("rpgpp_lt_scene_1.0");
     }
 
-    //游戏循环
+
+
+    //游戏循环,以固定频率更新
     void Update()
     {
         try
         {
             ResManager.Instance.Update();
+            WorldManager.Instance.Update();
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             Debug.LogException(e);
         }
